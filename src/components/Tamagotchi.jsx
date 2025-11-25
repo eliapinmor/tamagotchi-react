@@ -30,7 +30,7 @@ export function Tamagotchi() {
 
     useEffect(() => {
         timer.current = setInterval(() => {
-            setHappiness(happiness => happiness - 1);
+            setHappiness(happiness => happiness - 5);
             setHealth(health => health - 1);
             setHunger(hunger => hunger - 1);
         }, 3000);
@@ -47,18 +47,21 @@ export function Tamagotchi() {
                     <label className="mr-2 font-medium">Hunger:</label>
                     <div className="bg-gray-300 h-4 rounded overflow-hidden">
                         <div className={`${getProgressColor(hunger)} h-full`} style={{ width: `${hunger}%` }} />
+                        <input type="range" min="0" max="100" value={hunger} readOnly className="w-full appearance-none bg-transparent absolute top-0 left-0 h-4 pointer-events-none" />
                     </div>
                 </div>
                 <div className="flex items-center">
                     <label className="mr-2 font-medium">Happiness:</label>
                     <div className="flex-1 bg-gray-300 h-4 rounded overflow-hidden">
                         <div className="bg-blue-500 h-full" style={{ width: `${happiness}%` }} />
+                        <input type="range" min="0" max="100" value={happiness} readOnly className="w-full appearance-none bg-transparent absolute top-0 left-0 h-4 pointer-events-none" />
                     </div>
                 </div>
                 <div className="flex items-center">
                     <label className="mr-2 font-medium">Health:</label>
                     <div className="flex-1 bg-gray-300 h-4 rounded overflow-hidden">
                         <div className="bg-red-500 h-full" style={{ width: `${health}%` }} />
+                        <input type="range" min="0" max="100" value={health} readOnly className="w-full appearance-none bg-transparent absolute top-0 left-0 h-4 pointer-events-none" />
                     </div>
                 </div>
             </div>
