@@ -1,16 +1,40 @@
-# React + Vite
+# 🐣 Tamagotchi React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Un pequeño juego digital estilo **Tamagotchi** construido con **React**, donde para que el Tamagotchi esté feliz le puedes alimentar, jugar y dormir. En el caso de que no se encuentre bien, ya sea por falta de felicidad, sueño o hambre tu Tamagotchi se pondrá trist, de mal humor o aburrido.
 
-Currently, two official plugins are available:
+## 🚀 Características
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+-   🎮 Interacciones básicas: Feed, Play, Sleep
+-   📉 Deterioro automático del estado con el tiempo
+-   😄 Estados dinámicos del tamagotchi
+-   🎨 Barras de progreso con colores
+-   ⚛️ React Hooks
 
-## React Compiler
+## 📂 Estructura del Proyecto
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+    tamagotchi-react/
+    │── src/
+    │   ├── components/
+    │   │   └── Tamagotchi.jsx
+    │   ├── assets/
+    │   ├── App.jsx
+    │   ├── main.jsx
+    │   ├── styles.css
+    │   ├── index.css
+    │── public/
+    │── package.json
+    │── vite.config.js
+    │── README.md
 
-## Expanding the ESLint configuration
+## ▶️ Cómo ejecutar el proyecto
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+``` bash
+npm install
+npm run dev
+```
+
+## 📦 Build de producción
+
+``` bash
+npm run build
+```
