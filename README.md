@@ -33,8 +33,3 @@ npm install
 npm run dev
 ```
 
-## 📦 Build de producción
-
-``` bash
-npm run build
-```
